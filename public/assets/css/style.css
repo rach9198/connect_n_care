@@ -1,0 +1,170 @@
+body {
+  background: url('./imgs/bg2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  height: vh;
+}
+
+#nav {
+  width: 100%;
+  display: flex;
+
+}
+
+.title-contents {
+  top: 0;
+  margin-top: 0;
+  margin-left: 4%;
+  width: 70%;
+  display: flex;
+}
+
+.title-contents img {
+  margin-top: 2%;
+  width: 80px;
+  height: 80px;
+}
+
+.title-logo {
+  display: flex;
+  padding: 2%;
+  flex-direction: column;
+}
+
+#main-title {
+  /* font-family: "Bad Script"; */
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Stalemate";
+  font-size: 50px;
+  margin-top: 7%;
+  margin-bottom: 0%;
+  border-bottom: 1px solid red;
+}
+
+#sub-title {
+  font-family: "Josefin Slab";
+  font-size: 20px;
+  margin-top: 0%;
+  margin-bottom: 2px;
+}
+
+.login-buttons {
+  margin: 3%;
+  display: flex;
+  color: white;
+}
+
+
+
+#login-button {
+  width: 120px;
+  height: 40px;
+  margin-right: 5%;
+  background-color: rgb(21, 21, 121);
+  color: white;
+  border-radius: 25px;
+  border-color: rgb(21, 21, 121);
+  outline: none;
+}
+
+#login-button:hover {
+  background-color: aliceblue;
+  border-color: aliceblue;
+  color: rgb(21, 21, 121);
+  font-weight: bold;
+}
+
+#register-button {
+  width: 120px;
+  height: 40px;
+  background-color: rgb(143, 19, 19);
+  color: white;
+  border-radius: 25px;
+  border-color: rgb(143, 19, 19);
+  outline: none;
+}
+
+#register-button:hover {
+  background-color: aliceblue;
+  border-color: aliceblue;
+  color: rgb(143, 19, 19);
+  font-weight: bold;
+}
+
+
+
+.features {
+  margin: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+/* 
+.telehealth {
+  margin: 4%;
+}
+
+.pandemic {
+  margin: 4%;
+} */
+
+
+
+.logo-features {
+  margin-top: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-features img{
+  width: 100px;
+  height: 100px;
+}
+
+.logo-feature {
+  /* padding: 1%; */
+  align-items: center;
+  text-align: center;
+  border-radius: 25px;
+  /* background-color: rgba(108, 191, 223, 0.308); */
+  margin: 2%;
+  width: 250px;
+  height: 250px;
+}
+
+/* .content {
+  margin-top: 8%;
+  width: 250px;
+  height: 150px;
+  /* background-color: #fff; */
+  /*background-color: rgba(108, 191, 223, 0.308);
+  border-radius: 25px;
+} */
+
+.feature {
+  margin-top: 8%;
+  padding: 2%;
+  height: 150px;
+  width: 250px;
+  border-radius: 25px;
+  background-color: rgba(230, 228, 228, 0.568);
+}
+
+.feature h2 {
+  font-family: "Josefin Slab";
+  font-size: 22px;
+  font-weight: bolder;
+}
+
+.feature p {
+  font-family: "Poppins";
+  font-weight: lighter;
+  font-size: 15px;
+}
+

@@ -1,0 +1,181 @@
+body {
+  background: url('./imgs/healthcare-edit4.jpg');
+  /* backdrop-filter: brightness(70%); */
+  /* background */
+  background-size: cover;
+  /* filter: brightness(100%); */
+  margin: 0;
+  padding: 0;
+  color: rgb(214, 210, 210);
+  background-attachment: fixed;
+  font-family: "Raleway";
+}
+/* 
+#main {
+  background-color: rgba(199, 167, 167, 0.5);
+  background-color:   rgba(227, 230, 238, 0.13);
+  display: flex;
+
+  width: 100%;
+  height: 100vh;
+} */
+
+
+#nav {
+  width: 100%;
+  display: flex;
+  /* background-color:   rgba(24, 24, 24, 0.13); */
+}
+
+.title-contents {
+  top: 0;
+  margin-top: 0;
+  margin-left: 4%;
+  width: 70%;
+  display: flex;
+  /* text-align: center;
+  align-items: center; */
+  /* justify-content: center; */
+}
+
+.title-contents img {
+  margin-top: 2%;
+  width: 80px;
+  height: 80px;
+}
+
+.title-logo {
+  display: flex;
+  padding: 2%;
+  flex-direction: column;
+}
+
+#main-title {
+  /* font-family: "Bad Script"; */
+  color: whitesmoke;
+  text-align: center;
+  font-family: "Stalemate";
+  font-size: 50px;
+  margin-top: 7%;
+  margin-bottom: 0%;
+  border-bottom: 1px solid red;
+}
+
+.details {
+  margin-top: 1%;
+  margin-left: 60%;
+  display: flex;
+  /* flex-direction: row-reverse; */
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.details p{
+  margin-right: 4%;
+
+}
+
+.details img {
+  margin-right: 2%;
+  width: 50px;
+  height: 50px;
+  border: 2px solid grey;
+  border-radius: 50%;
+}
+
+
+.details a {
+  font-style: unset;
+  color: white;
+  font-size: 14px;
+  margin-right: 4%;
+}
+
+.details a:hover {
+  color: rgb(0, 255, 225);
+}
+
+
+.consultations {
+  margin-top: 2%;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+.consultation {
+  margin-bottom: 0%;
+  padding: 1%;
+  display: flex;
+  border-bottom: 1px solid rgb(226, 224, 224);
+}
+
+.consultation img {
+  width: 80px;
+  height: 80px;
+  margin-right: 2%;
+  filter: brightness(70%);
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+/* .doctor {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /*align-items: center;
+  
+} */
+
+.consult-content h2 {
+  font-size: 20px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  color: aliceblue;
+  font-family: "Josefin Slab";
+}
+
+.consult-content p {
+  font-size: 14px;
+  margin-top: 0%;
+  margin-bottom: 5px;
+  color: gainsboro;
+  font-family: "Raleway";
+}
+
+#amount {
+  margin-bottom: 0%;
+}
+
+.consult-content {
+  width: 80%;
+  height: 50%;
+} 
+
+.consultation input {
+  /* float: right; */
+  width: 100px;
+  height: 35px;
+  /* padding: 8px; */
+  margin-top: 2.3%;
+  background-color: rgb(0, 175, 156);
+  border-color: rgb(0, 175, 156);
+  border-radius: 5px;
+  outline: none;
+  text-align: center;
+  /* align-items: center;
+  justify-content: center; */
+}
+
+.consultation input:hover {
+  width: 100px;
+  height: 35px;
+  font-weight: bold;
+  /* padding: 8px; */
+  /* margin-top: 2%; */
+  background-color: rgb(0, 255, 225);
+  border-color: rgb(0, 255, 225);
+  border-radius: 5px;
+  outline: none;
+}

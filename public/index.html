@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ConnectNcare</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Bad Script' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Josefin Slab' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Stalemate' rel='stylesheet'>
+
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"> -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+
+
+
+<body>
+  <nav id="nav">
+    <div class="title-contents">
+      
+      <img src="./imgs/healthLogo.png">
+      <div class="title-logo">
+        <h1 id="main-title">Connect n Care</h1>
+        <!-- <p id="sub-title">Health Care</p> -->
+      </div>
+      
+    </div>
+    <div class="login-buttons">
+      <button id="login-button" data-toggle="modal" data-target="#login-modal">LOGIN</button>
+
+      <button id="register-button"  data-toggle="modal" data-target="#register-modal">REGISTER</button>
+    </div>
+  </nav>
+
+
+
+  <section class="logo-features">
+    <div class="logo-feature">
+      <img src="./imgs/checkup-shade.png" alt="checkup img">
+      <div class="feature">
+        <h2>TeleHealth</h2>
+        <p>Connect to your doctor while at home</p>
+      </div>
+
+    </div>
+
+    <div class="logo-feature">
+      <img src="./imgs/tooth-shade.png" alt="tooth img">
+      <div class="feature">
+        <h2>Dental Care</h2>
+        <p>Connect to your Dentists while at home</p>
+      </div>
+    </div>
+
+    <div class="logo-feature">
+      <img src="./imgs/medicine-shade.png" alt="medicine img">
+      <div class="feature">
+        <h2>Medicines</h2>
+        <p>Get your medicines while at home</p>
+      </div>
+    </div>
+
+    <div class="logo-feature">
+      <img src="./imgs/covid1.png" alt="pandemic img">
+      <div class="feature">
+        <h2>Corona Pandemic</h2>
+        <p>Get an online appointment and there you go.. <br> Safer! Sounds better know.</p>
+        <!-- <p>Safer! Sounds better know.</p> -->
+      </div>
+    </div>
+  </section>
+  
+
+
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLabel">Login</h3>
+          <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button> -->
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- register Modal -->
+  <div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLabel">Register Now!</h3>
+          <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button> -->
+        </div>
+        <div class="modal-body">
+          <form>
+
+            <div class="form-group">
+              <label for="InputName">Name</label>
+              <input type="text" class="form-control" id="username" placeholder="Username">
+            </div>
+
+
+
+            <div class="form-group">
+              <label for="InputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+
+
+
+            <div class="form-group">
+              <label for="InputPassword1">Password</label>
+              <input type="password" class="form-control" id="password1" placeholder="Password">
+            </div>
+
+
+            
+                        
+            <div class="form-group">
+              <label for="InputPassword2">Confirm Password</label>
+              <input type="password" class="form-control" id="password2" placeholder="Confirm Password">
+            </div>
+            
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- bulma modal -->
+  <!-- <div class="modal">
+    
+    <div class="modal-background"></div>
+      <div class="modal-content has-background-white py-5 px-5">
+        <h3 class="title mb-6">LOGIN</h3>
+
+        <form action="">
+          <div class="field">
+            <label class="label">Name</label>
+            <div class="control">
+              <input type="text" class="input" placeholder="Name">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Password</label>
+            <div class="control">
+              <input type="text" class="input" placeholder="Password">
+            </div>
+          </div>
+
+          <div class="mt-6 has-text-centered">
+            <button class="button is-success">Login</button>
+          </div>
+        </form>
+      </div>
+    
+  </div> -->
+
+  <!-- bootsrap modal -->
+  <!-- <div class="modal" id="mymodal">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" type="button" data-dismiss="modal">X</button>
+          <div class="modal-title">
+            <i class="fa fa-sign-in" aria-hidden="true"></i>
+
+            <img src="./imgs/bloodtest.png" width="50px" alt="">
+            <h2>Login</h2>
+          </div>
+        </div>
+        <div class="modal-body">
+          Name
+          <input type="text" class="input" placeholder="Name">
+<br><br>
+          Password
+          <input type="text" class="input" placeholder="Password">
+        </div>
+      </div>
+    </div>
+  </div> -->
