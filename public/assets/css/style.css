@@ -52,48 +52,8 @@ body {
   margin-bottom: 2px;
 }
 
-.login-buttons {
-  margin: 3%;
-  display: flex;
-  color: white;
-}
 
 
-
-#login-button {
-  width: 120px;
-  height: 40px;
-  margin-right: 5%;
-  background-color: rgb(21, 21, 121);
-  color: white;
-  border-radius: 25px;
-  border-color: rgb(21, 21, 121);
-  outline: none;
-}
-
-#login-button:hover {
-  background-color: aliceblue;
-  border-color: aliceblue;
-  color: rgb(21, 21, 121);
-  font-weight: bold;
-}
-
-#register-button {
-  width: 120px;
-  height: 40px;
-  background-color: rgb(143, 19, 19);
-  color: white;
-  border-radius: 25px;
-  border-color: rgb(143, 19, 19);
-  outline: none;
-}
-
-#register-button:hover {
-  background-color: aliceblue;
-  border-color: aliceblue;
-  color: rgb(143, 19, 19);
-  font-weight: bold;
-}
 
 
 

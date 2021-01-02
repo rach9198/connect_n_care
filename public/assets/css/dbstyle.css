@@ -63,7 +63,7 @@ body {
 
 .details {
   margin-top: 1%;
-  margin-left: 60%;
+  /* margin-left: 60%; */
   display: flex;
   /* flex-direction: row-reverse; */
   text-align: center;
@@ -178,4 +178,20 @@ body {
   border-color: rgb(0, 255, 225);
   border-radius: 5px;
   outline: none;
+}
+
+#credits {
+  margin-left: 5%;
+  text-align: left;
+  flex: 1;
+  color: gold;
+  display: flex;
+  width: 40%;
+  font-size: 150%;
+
+}
+
+#credits i {
+  font-size: 150%;
+  padding-right: 15px;
 }

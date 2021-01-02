@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/dbstyle.css" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Bad Script"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Josefin Slab"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Stalemate"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <nav id="nav">
+      <!-- <div class="title-contents">
+        <img src="./assets/img/healthLogo.png" />
+        <div class="title-logo">
+          <h1 id="main-title">Connect n Care</h1>
+        </div>
+      </div>
+      <div class="login-buttons">
+        <button
+
+          id="dashboard-button"
+        >
+          DASHBOARD
+        </button>
+  
+        <button
+
+          id="signout-button"
+        >
+          SIGNOUT
+        </button>
+      </div> -->
+    </nav>
+
+    <div class="details">
+      <div id="credits" >
+        <!-- <i class="fas fa-coins"></i>
+        20 -->
+      </div>
+      <img src="../assets/img/person1.png" alt="" />
+      <a href="" data-toggle="modal" data-target="#personal-modal"
+        >Add personal details</a
+      >
+
+      <img src="../assets/img/member1.png" alt="" />
+      <a href="" data-toggle="modal" data-target="#member-modal"
+        >Add or view family members</a
+      >
+    </div>
+
+    <section class="consultations">
+      <div class="consultation">
+        <img src="../assets/img/doctor.png" alt="" />
+        <div class="consult-content">
+          <h2>Doctor</h2>
+          <p>Communicate with your doctor</p>
+          <p id="amount">300</p>
+        </div>
+        <input type="button" value="Book" />
+      </div>
+
+      <div class="consultation">
+        <img src="../assets/img/dentist.png" alt="" />
+        <div class="consult-content">
+          <h2>Dentist</h2>
+          <p>Your smile is our passion</p>
+          <p class="amount">300</p>
+        </div>
+        <input type="button" value="Book" />
+      </div>
+
+      <div class="consultation">
+        <img src="../assets/img/yoga.png" alt="" />
+        <div class="consult-content">
+          <h2>Yoga</h2>
+          <p>Bring out your flexibility</p>
+          <p class="amount">300</p>
+        </div>
+        <input type="button" value="Book" />
+      </div>
+
+      <div class="consultation">
+        <img src="../assets/img/nurse.png" alt="" />
+        <div class="consult-content">
+          <h2>Nurse</h2>
+          <p>Nursing is the gentle art of caring</p>
+          <p class="amount">300</p>
+        </div>
+        <input type="button" value="Book" />
+      </div>
+
+      <div class="consultation">
+        <img src="../assets/img/nutrition.png" alt="" />
+        <div class="consult-content">
+          <h2>Nutritionist</h2>
+          <p>Step Up To the Plate and Change Your Life</p>
+          <p class="amount">300</p>
+        </div>
+        <input type="button" value="Book" />
+      </div>
+
+      <div class="consultation">
+        <img src="../assets/img/mentalHealth.png" alt="" />
+        <div class="consult-content">
+          <h2>Mental Health</h2>
+          <p>When you take therapies, you heal from within</p>
+          <p class="amount">300</p>
+        </div>
+        <input type="button" value="Book" />
+      </div>
+
+      <div class="consultation">
+        <img src="../assets/img/bloodtest.png" alt="" />
+        <div class="consult-content">
+          <h2>Blood Test</h2>
+          <p>Your blood is replaceable. A life is not!</p>
+          <p class="amount">300</p>
+        </div>
+        <input type="button" value="Book" />
+      </div>
+
+      <div class="consultation">
+        <img src="../assets/img/medicine.png" alt="" />
+        <div class="consult-content">
+          <h2>Medicines</h2>
+          <p>Don’t you fuss – get meds from us.</p>
+          <p class="amount">300</p>
+        </div>
+        <input type="button" value="Book" />
+      </div>
+    </section>
+
+    <!-- Personal-details Modal -->
+    <div
+      class="modal fade"
+      id="personal-modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLabel">Personal Details</h3>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <!-- <label for="InputName">Name</label> -->
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstname"
+                  placeholder="First Name"
+                />
+              </div>
+
+              <div class="form-group">
+                <!-- <label for="InputEmail1">Email address</label> -->
+                <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> -->
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastname"
+                  placeholder="Last Name"
+                />
+              </div>
+
+              <div class="form-group">
+                <!-- <label for="InputPassword2">Confirm Password</label> -->
+                <input
+                  type="number"
+                  class="form-control"
+                  id="phno"
+                  placeholder="Phone Number"
+                />
+              </div>
+
+              <div class="form-group">
+                <!-- <label for="InputPassword1">Password</label> -->
+                <input
+                  type="text"
+                  class="form-control"
+                  id="dob"
+                  placeholder="Date of Birth"
+                />
+              </div>
+
+              <div class="form-group">
+                <!-- <label for="InputPassword1">Password</label> -->
+                <input
+                  type="text"
+                  class="form-control"
+                  id="residence"
+                  placeholder="Curent city of residence"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-success">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Member-details Modal -->
+    <div
+      class="modal fade"
+      id="member-modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLabel">Register Now!</h3>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="InputName">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  placeholder="Username"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="InputEmail1">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter email"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="InputPassword1">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password1"
+                  placeholder="Password"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="InputPassword2">Confirm Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password2"
+                  placeholder="Confirm Password"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-success">Login</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer></footer>
+
+    <!-- #00af9c - button colour -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+    <script src="../assets/js/firebase.js"></script>
+    <script src="./dashboard1.js"></script>
+  </body>
+</html>
