@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      rel="shortcut icon"
+      href="../assets/img/healthLogo.png"
+      type="image/x-icon"
+    />
+    <title>Dashboard</title>
     <link rel="stylesheet" href="../assets/css/dbstyle.css" />
     <link rel="stylesheet" href="../assets/css/common.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
@@ -69,23 +70,28 @@
     </nav>
 
     <div class="details">
-      <div id="credits" >
+      <div id="credits">
         <!-- <i class="fas fa-coins"></i>
         20 -->
       </div>
       <img src="../assets/img/person1.png" alt="" />
       <a href="" data-toggle="modal" data-target="#personal-modal"
-        >Add personal details</a
+        >Your Personal Details 😎</a
       >
 
       <img src="../assets/img/member1.png" alt="" />
       <a href="" data-toggle="modal" data-target="#member-modal"
-        >Add or view family members</a
+        >Your Family Member 👨‍👩‍👦‍👦</a
       >
     </div>
 
-    <section class="consultations">
-      <div class="consultation">
+    <div id="message">
+      <b><p style="color: green" id="messageSuccess"></p></b>
+      <b><p style="color: red" id="messageError"></p></b>
+    </div>
+
+    <section class="consultations" id="consultations">
+      <!-- <div class="consultation">
         <img src="../assets/img/doctor.png" alt="" />
         <div class="consult-content">
           <h2>Doctor</h2>
@@ -93,77 +99,7 @@
           <p id="amount">300</p>
         </div>
         <input type="button" value="Book" />
-      </div>
-
-      <div class="consultation">
-        <img src="../assets/img/dentist.png" alt="" />
-        <div class="consult-content">
-          <h2>Dentist</h2>
-          <p>Your smile is our passion</p>
-          <p class="amount">300</p>
-        </div>
-        <input type="button" value="Book" />
-      </div>
-
-      <div class="consultation">
-        <img src="../assets/img/yoga.png" alt="" />
-        <div class="consult-content">
-          <h2>Yoga</h2>
-          <p>Bring out your flexibility</p>
-          <p class="amount">300</p>
-        </div>
-        <input type="button" value="Book" />
-      </div>
-
-      <div class="consultation">
-        <img src="../assets/img/nurse.png" alt="" />
-        <div class="consult-content">
-          <h2>Nurse</h2>
-          <p>Nursing is the gentle art of caring</p>
-          <p class="amount">300</p>
-        </div>
-        <input type="button" value="Book" />
-      </div>
-
-      <div class="consultation">
-        <img src="../assets/img/nutrition.png" alt="" />
-        <div class="consult-content">
-          <h2>Nutritionist</h2>
-          <p>Step Up To the Plate and Change Your Life</p>
-          <p class="amount">300</p>
-        </div>
-        <input type="button" value="Book" />
-      </div>
-
-      <div class="consultation">
-        <img src="../assets/img/mentalHealth.png" alt="" />
-        <div class="consult-content">
-          <h2>Mental Health</h2>
-          <p>When you take therapies, you heal from within</p>
-          <p class="amount">300</p>
-        </div>
-        <input type="button" value="Book" />
-      </div>
-
-      <div class="consultation">
-        <img src="../assets/img/bloodtest.png" alt="" />
-        <div class="consult-content">
-          <h2>Blood Test</h2>
-          <p>Your blood is replaceable. A life is not!</p>
-          <p class="amount">300</p>
-        </div>
-        <input type="button" value="Book" />
-      </div>
-
-      <div class="consultation">
-        <img src="../assets/img/medicine.png" alt="" />
-        <div class="consult-content">
-          <h2>Medicines</h2>
-          <p>Don’t you fuss – get meds from us.</p>
-          <p class="amount">300</p>
-        </div>
-        <input type="button" value="Book" />
-      </div>
+      </div>  -->
     </section>
 
     <!-- Personal-details Modal -->
@@ -175,77 +111,121 @@
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog modal-sm" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h3 class="modal-title" id="exampleModalLabel">Personal Details</h3>
-          </div>
-          <div class="modal-body">
-            <form>
+      <form id="userUpdateForm">
+        <div class="modal-dialog modal-sm" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="exampleModalLabel">
+                Personal Details
+              </h3>
+            </div>
+            <div class="modal-body">
               <div class="form-group">
-                <!-- <label for="InputName">Name</label> -->
+                <b
+                  ><p
+                    id="userUpdateMsgSuccess"
+                    style="display: none; color: green; text-align: center"
+                  ></p
+                ></b>
+                <b
+                  ><p
+                    id="userUpdateMsgError"
+                    style="display: none; color: red; text-align: center"
+                  ></p
+                ></b>
+              </div>
+              <div class="form-group">
                 <input
+                  required
                   type="text"
                   class="form-control"
-                  id="firstname"
-                  placeholder="First Name"
+                  id="username"
+                  name="username"
+                  placeholder="Username"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  required
+                  name="address"
+                  type="text"
+                  class="form-control"
+                  id="address"
+                  placeholder="Address"
                 />
               </div>
 
               <div class="form-group">
-                <!-- <label for="InputEmail1">Email address</label> -->
-                <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> -->
                 <input
+                  required
+                  name="landmark"
                   type="text"
                   class="form-control"
-                  id="lastname"
-                  placeholder="Last Name"
+                  id="lamdmark"
+                  placeholder="Landmark"
                 />
               </div>
-
               <div class="form-group">
-                <!-- <label for="InputPassword2">Confirm Password</label> -->
                 <input
+                  required
+                  name="city"
+                  type="text"
+                  class="form-control"
+                  id="city"
+                  placeholder="City"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  required
+                  name="state"
+                  type="text"
+                  class="form-control"
+                  id="state"
+                  placeholder="State"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  name="phone"
+                  required
                   type="number"
                   class="form-control"
-                  id="phno"
+                  id="phone"
                   placeholder="Phone Number"
                 />
               </div>
-
               <div class="form-group">
-                <!-- <label for="InputPassword1">Password</label> -->
                 <input
-                  type="text"
+                  required
+                  name="dob"
+                  type="date"
                   class="form-control"
                   id="dob"
                   placeholder="Date of Birth"
                 />
               </div>
-
-              <div class="form-group">
-                <!-- <label for="InputPassword1">Password</label> -->
-                <input
-                  type="text"
-                  class="form-control"
-                  id="residence"
-                  placeholder="Curent city of residence"
-                />
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-success">Submit</button>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                type="submit"
+                id="userUpdateFormBtn"
+                form="userUpdateForm"
+                class="btn btn-success"
+              >
+                Update Info
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      </form>
     </div>
 
     <!-- Member-details Modal -->
@@ -257,67 +237,128 @@
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog modal-sm" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h3 class="modal-title" id="exampleModalLabel">Register Now!</h3>
-          </div>
-          <div class="modal-body">
-            <form>
+      <form id="memberUpdateForm">
+        <div class="modal-dialog modal-sm" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="exampleModalLabel">Register Now!</h3>
+            </div>
+            <div class="modal-body">
               <div class="form-group">
-                <label for="InputName">Name</label>
+                <b
+                  ><p
+                    id="memberUpdateMsgSuccess"
+                    style="display: none; color: green; text-align: center"
+                  ></p
+                ></b>
+                <b
+                  ><p
+                    id="memberUpdateMsgError"
+                    style="display: none; color: red; text-align: center"
+                  ></p
+                ></b>
+              </div>
+              <div class="form-group">
+                <label>Name</label>
+                <input
+                  required
+                  name="name"
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="InputName">Relation</label>
+                <select
+                  required
+                  name="realtion"
+                  id="relation"
+                  class="form-control"
+                >
+                  <option selected disabled value="">
+                    Select your relation
+                  </option>
+                  <option value="Wife">Wife</option>
+                  <option value="Husband">Husband</option>
+                  <option value="Mother">Mother</option>
+                  <option value="Father">Father</option>
+                  <option value="Brother">Brother</option>
+                  <option value="Sister">Sister</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Email address</label>
+                <input
+                  name="email"
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  aria-describedby="emailHelp"
+                  placeholder="Email"
+                />
+              </div>
+              <div class="form-group">
+                <label>Address</label>
+                <input
+                  type="text"
+                  name="address"
+                  class="form-control"
+                  placeholder="Address"
+                />
+              </div>
+              <div class="form-group">
+                <label>City</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="username"
-                  placeholder="Username"
+                  name="city"
+                  placeholder="City"
                 />
               </div>
-
               <div class="form-group">
-                <label for="InputEmail1">Email address</label>
+                <label>State</label>
                 <input
-                  type="email"
+                  type="text"
                   class="form-control"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
-                  placeholder="Enter email"
+                  name="state"
+                  placeholder="State"
                 />
               </div>
-
               <div class="form-group">
-                <label for="InputPassword1">Password</label>
+                <label>Phone Number</label>
                 <input
-                  type="password"
+                  type="number"
                   class="form-control"
-                  id="password1"
-                  placeholder="Password"
+                  name="phone"
+                  placeholder="Phone"
+                  max="9999999999"
+                  min="1000000000"
+                  maxlength="10"
                 />
               </div>
-
-              <div class="form-group">
-                <label for="InputPassword2">Confirm Password</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="password2"
-                  placeholder="Confirm Password"
-                />
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-success">Login</button>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                type="submit"
+                id="memberUpdateFormBtn"
+                form="memberUpdateForm"
+                class="btn btn-success"
+              >
+                Update Info
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      </form>
     </div>
     <footer></footer>
 

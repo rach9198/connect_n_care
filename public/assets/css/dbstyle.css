@@ -1,5 +1,5 @@
 body {
-  background: url('../img/healthcare-edit4.jpg');
+  background: url("../img/healthcare-edit4.jpg");
   /* backdrop-filter: brightness(70%); */
   /* background */
   background-size: cover;
@@ -19,7 +19,6 @@ body {
   width: 100%;
   height: 100vh;
 } */
-
 
 #nav {
   width: 100%;
@@ -69,12 +68,10 @@ body {
   text-align: center;
   justify-content: center;
   align-items: center;
-
 }
 
-.details p{
+.details p {
   margin-right: 4%;
-
 }
 
 .details img {
@@ -84,7 +81,6 @@ body {
   border: 2px solid grey;
   border-radius: 50%;
 }
-
 
 .details a {
   font-style: unset;
@@ -96,7 +92,6 @@ body {
 .details a:hover {
   color: rgb(0, 255, 225);
 }
-
 
 .consultations {
   margin-top: 2%;
@@ -124,7 +119,7 @@ body {
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
-  /*align-items: center;
+/*align-items: center;
   
 } */
 
@@ -151,7 +146,7 @@ body {
 .consult-content {
   width: 80%;
   height: 50%;
-} 
+}
 
 .consultation input {
   /* float: right; */
@@ -188,10 +183,21 @@ body {
   display: flex;
   width: 40%;
   font-size: 150%;
-
 }
 
 #credits i {
   font-size: 150%;
   padding-right: 15px;
+}
+
+#message {
+  display: none;
+  text-align: center;
+  margin: 20px;
+  font-size: larger;
+  position: sticky;
+  top: 20%;
+  background-color: rgba(218, 218, 218, 0.7);
+  padding: 10px;
+  border-radius: 20px;
 }
