@@ -140,13 +140,20 @@ const submitSigninForm = (e) => {
 
   auth
     .signInWithEmailAndPassword(email, password)
-    .then((user) => {
+    .then(async(user) => {
       successSignInHTML.getElementsByClassName.display = "block";
       successSignInHTML.innerHTML = `LoggedIn Successfully`;
       setTimeout(() => {
         successSignInHTML.style.display = "none";
       }, 3000);
-      window.location.href = `./dashboard/dashboard.html?user=${user.user.uid}`;
+      await db.collection('customers').doc(user.user.uid).get().then(uDoc => {
+        let uData = uDoc.data();
+        if(uData.isAdmin) {
+          window.location.href = `./admin/admin.html?admin=${user.user.uid}`;
+        } else {
+          window.location.href = `./dashboard/dashboard.html?user=${user.user.uid}`;
+        }
+      })
       // console.log(user);
       // console.log(user.user.uid);
       // console.log('userSigniN');

@@ -40,8 +40,11 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
     />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script> -->
   </head>
 
   <body>
@@ -81,7 +84,12 @@
 
       <img src="../assets/img/member1.png" alt="" />
       <a href="" data-toggle="modal" data-target="#member-modal"
-        >Your Family Member 👨‍👩‍👦‍👦</a
+        >Add Family Members 👨‍👩‍👦‍👦</a
+      >
+
+      <img src="../assets/img/member1.png" alt="" />
+      <a href="" data-toggle="modal" data-target="#viewMembers-modal"
+        >View Family Members 👨‍👩‍👦‍👦</a
       >
     </div>
 
@@ -101,6 +109,191 @@
         <input type="button" value="Book" />
       </div>  -->
     </section>
+
+    <!-- view family members -->
+    <div
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+      class="modal fade"
+      id="viewMembers-modal"
+    >
+      <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLabel">Your all Loved Onces👨‍👩‍ 👨‍👨‍👧‍👦</h3>
+          </div>
+          <div class="modal-body">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default" id="allFamilyMemebers">
+                <!-- <div class="panel-heading" role="tab" id="headingOne">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Collapsible Group Item #1
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body">
+                    <table class="table table-hover">
+                      <tbody>
+                        <tr style="color: aliceblue; background-color: red;">
+                          <th>Name</th>
+                          <td></td>
+                        </tr>
+                        <tr style="color: aliceblue; background-color: orange;">
+                          <th>Relation</th>
+                          <td></td>
+                        </tr>
+                        <tr style="color: aliceblue; background-color: black;">
+                          <th>Email</th>
+                          <td></td>
+                        </tr>
+                        <tr style="color: aliceblue; background-color: green;">
+                          <th>Address</th>
+                          <td></td>
+                        </tr>
+                        <tr style="color: aliceblue; background-color: blue;">
+                          <th>City</th>
+                          <td></td>
+                        </tr>
+                        <tr style="color: aliceblue; background-color: indigo;">
+                          <th>State</th>
+                          <td></td>
+                        </tr>
+                        <tr style="color: aliceblue; background-color: violet;">
+                          <th>Phone No.</th>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- credits modal -->
+    <div
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+      class="modal fade"
+      id="credits-modal"
+    >
+      <form id="creditsForm">
+        <div class="modal-dialog modal-sm" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="exampleModalLabel">Add Credits</h3>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <b
+                  ><p
+                    id="creditsMsgSuccess"
+                    style="display: none; color: green; text-align: center"
+                  ></p
+                ></b>
+                <b
+                  ><p
+                    id="creditsMsgError"
+                    style="display: none; color: red; text-align: center"
+                  ></p
+                ></b>
+              </div>
+              <div
+                class="form-group"
+                style="
+                  text-align: center;
+                  background-color: rgb(209, 209, 209);
+                  padding: 30px 0px;
+                "
+              >
+                <b>UPI </b>: connectnCare@okamdin <br />
+                <b>Bank</b> : Connect Bank<br />
+                <b>Account Number </b>: 9876541235<br />
+                <b>IFFC Code </b>: CONC0123<br />
+                <b>Paytm </b>: 9517536548<br />
+              </div>
+              <div class="form-group">
+                <label>Mode of payment</label>
+                <select
+                  required
+                  name="paymentMode"
+                  id="paymentMode"
+                  class="form-control"
+                >
+                  <option selected disabled value="">
+                    Select mode of payment
+                  </option>
+                  <option value="UPI">UPI</option>
+                  <option value="Netbanking">Netbanking</option>
+                  <option value="Pin">Pin</option>
+                  <option value="Paytm">Paytm</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Amout of credits to buy</label>
+                <input
+                  required
+                  type="number"
+                  class="form-control"
+                  id="amount"
+                  name="amount"
+                  placeholder="Amout of credits to buy"
+                />
+              </div>
+              <div class="form-group">
+                <label>Transation Number</label>
+                <input
+                  required
+                  type="text"
+                  class="form-control"
+                  id="transationNum"
+                  name="transationNum"
+                  placeholder="Transation Number"
+                />
+              </div>
+              <div class="form-group">
+                <label>Note <small> (Option)</small></label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="note"
+                  name="note"
+                  placeholder="Note"
+                />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="submit" class="btn btn-success">Add Credits</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
 
     <!-- Personal-details Modal -->
     <div
