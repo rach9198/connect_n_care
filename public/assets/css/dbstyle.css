@@ -210,12 +210,15 @@ body {
 }
 
 #creditsCards {
+  margin: auto;
   display: flex;
+  flex-wrap: wrap;
 }
 
 #creditsCards {
   width: 80%;
   margin: auto;
+
 }
 
 .card {
