@@ -228,7 +228,7 @@ const bookService = (e, current, sid) => {
     if (USER.details.userInfo) {
       if (USER.details.familyMembersInfo) {
         USER.details.credits = USER.details.credits - sInfo.price;
-        creditsHTML.innerHTML = `<i class="fas fa-coins"></i>${USER.details.credits}`;
+        creditsHTML.innerHTML = `<i class="fas fa-coins"></i>${USER.details.credits}  <button id="buyCreditsBtn"  data-toggle="modal" data-target="#credits-modal">Buy Credits</button>`;
         USER_REF.update("credits", USER.details.credits);
         messageHTML.style.display = "block";
         messageSuccessHTML.innerHTML = `😍Your ${sInfo.name} is booked 😇`;
